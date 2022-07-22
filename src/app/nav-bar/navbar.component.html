@@ -1,0 +1,41 @@
+<div class="nav-main">
+
+  <nav class="navbar-logo">
+    <a class="logo" routerLink="/">SKYPRINT</a>
+    <li class="logout btn btn-danger">
+      <button class="logbtn" [routerLink]="['src/app/compants/log/login']"> Logout </button>
+    </li>
+
+
+  </nav>
+  <div class="navmenu" [class.show]="isOpen" id="navbarSupportedContent">
+    <ul class="ulmenu">
+      <li>
+        <a class="active" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+      </li>
+      <li>
+        <a routerLink="/login" routerLinkActive="active">Logi n</a>
+      </li>
+      <li>
+        <a routerLink="/signup" routerLinkActive="active">sign up</a>
+      </li>
+      <li>
+        <a routerLink="/Card" routerLinkActive="active">Card</a>
+      </li>
+      <li>
+        <a routerLink="/our-us" routerLinkActive="active">our us</a>
+      </li>
+      <li>
+        <a routerLink="/products" routerLinkActive="active">Products</a>
+      </li>
+      <li>
+        <a routerLink="/call-us" routerLinkActive="active">Call Us</a>
+      </li>
+
+    </ul>
+  </div>
+  <button class="logbtn" (click)="toggelNavBar()" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span>open</span>
+    </button>
+</div>
