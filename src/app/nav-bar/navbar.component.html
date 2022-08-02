@@ -1,6 +1,6 @@
-<div class="nav-main">
+<div class="contaniner">
 
-  <nav class="navbar-logo">
+  <nav class="row">
     <a class="logo" routerLink="/">SKYPRINT</a>
     <li class="logout btn btn-danger">
       <button class="logbtn" [routerLink]="['src/app/compants/log/login']"> Logout </button>
@@ -8,7 +8,7 @@
 
 
   </nav>
-  <div class="navmenu" [class.show]="isOpen" id="navbarSupportedContent">
+  <div class="col-4" [class.show]="isOpen" id="navbarSupportedContent">
     <ul class="ulmenu">
       <li>
         <a class="active" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
