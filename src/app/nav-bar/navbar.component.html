@@ -1,41 +1,42 @@
-<div class="nav-main">
-
-  <nav class="navbar-logo">
-    <a class="logo" routerLink="/">SKYPRINT</a>
-    <li class="logout btn btn-danger">
-      <button class="logbtn" [routerLink]="['src/app/compants/log/login']"> Logout </button>
-    </li>
-
-
-  </nav>
-  <div class="navmenu" [class.show]="isOpen" id="navbarSupportedContent">
-    <ul class="ulmenu">
-      <li>
-        <a class="active" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+<div class="container-fluid d-flex mb-3">
+  <div class="navbar navbar-expand-lg  me-auto p-2">
+    <a class="navbar-brand p-1" routerLink="/">SKYPRINT <img src="/assets/image/logo.jpg" alt="" width="50" height="50"
+        class="d-inline-block align-text-top"></a>
+  </div>
+  <div class="p-2">
+    <ul class="nav nav-tabs p-1">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
       </li>
-      <li>
-        <a routerLink="/login" routerLinkActive="active">Login</a>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/login" routerLinkActive="active">Login</a>
       </li>
-      <li>
-        <a routerLink="/signup" routerLinkActive="active">sign up</a>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/signup" routerLinkActive="active">sign up</a>
       </li>
-      <li>
-        <a routerLink="/Card" routerLinkActive="active">Card</a>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/Card" routerLinkActive="active">Card</a>
       </li>
-      <li>
-        <a routerLink="/our-us" routerLinkActive="active">our us</a>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/our-us" routerLinkActive="active">our us</a>
       </li>
-      <li>
-        <a routerLink="/products" routerLinkActive="active">Products</a>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/products" routerLinkActive="active">Products</a>
       </li>
-      <li>
-        <a routerLink="/call-us" routerLinkActive="active">Call Us</a>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/call-us" routerLinkActive="active">Call Us</a>
       </li>
 
     </ul>
   </div>
-  <button class="logbtn" (click)="toggelNavBar()" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <div class="d-inline p-2" [class.show]="isOpen" id="navbarSupportedContent">
+    <li class="nav-item me-auto p-1">
+      <button class="logout btn btn-danger d-flex" [routerLink]="['src/app/compants/log/login']"> Logout </button>
+    </li>
+    <button class="logout btn btn-primary p-2" (click)="toggelNavBar()" type="button" data-toggle="collapse"
+      data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+      aria-label="Toggle navigation">
       <span>open</span>
     </button>
+  </div>
 </div>
