@@ -1,47 +1,31 @@
-<div class="contaniner">
+<div class="navbar navbar-dark bg-light row m-3">
 
   <nav class="row">
-    <a class="logo" routerLink="/">SKYPRINT</a>
-    <li class="logout btn btn-danger">
-      <button class="logbtn" [routerLink]="['src/app/compants/log/login']"> Logout </button>
-    </li>
+    <a class="nav-link col m-1 link-primary" routerLink="/">SKYPRINT </a>
 
+    <div class="col text-center" [class.show]="isOpen" id="navbarSupportedContent">
+      <ul class="row text-center">
+
+        <a class="active nav-link col" routerLink="/" routerLinkActive="active"
+          [routerLinkActiveOptions]="{exact: true}">Home</a>
+        <a class="nav-link link-info col" routerLink="/login" routerLinkActive="active">Login</a>
+        <a class="nav-link col " routerLink="/signup" routerLinkActive="active">sign up</a>
+        <a class="nav-link col" routerLink="/Card" routerLinkActive="active">Card</a>
+        <a class="nav-link col" routerLink="/our-us" routerLinkActive="active">our us</a>
+        <a class="nav-link col" routerLink="/products" routerLinkActive="active">Products</a>
+        <a class="nav-link col" routerLink="/call-us" routerLinkActive="active">Call Us</a>
+
+      </ul>
+    </div>
+
+    <div class="col " [class.show]="isOpen" id="navbarSupportedContent">
+      <button class=" btn btn-danger ml-1 text-right" [routerLink]="['src/app/compants/log/login']"> Logout </button>
+      <button class=" btn btn-primary mr-1" (click)="toggelNavBar()" type="button" data-toggle="collapse"
+        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span>open</span>
+      </button>
+    </div>
 
   </nav>
-  <div class="col-4" [class.show]="isOpen" id="navbarSupportedContent">
-    <ul class="ulmenu">
-      <li>
-        <a class="active" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/login" routerLinkActive="active">Login</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/signup" routerLinkActive="active">sign up</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/Card" routerLinkActive="active">Card</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/our-us" routerLinkActive="active">our us</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/products" routerLinkActive="active">Products</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/call-us" routerLinkActive="active">Call Us</a>
-      </li>
-
-    </ul>
-  </div>
-  <div class="d-inline p-2" [class.show]="isOpen" id="navbarSupportedContent">
-    <li class="nav-item me-auto p-1">
-      <button class="logout btn btn-danger d-flex" [routerLink]="['src/app/compants/log/login']"> Logout </button>
-    </li>
-    <button class="logout btn btn-primary p-2" (click)="toggelNavBar()" type="button" data-toggle="collapse"
-      data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-      aria-label="Toggle navigation">
-      <span>open</span>
-    </button>
-  </div>
 </div>
