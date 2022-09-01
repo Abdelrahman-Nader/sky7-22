@@ -1,31 +1,19 @@
-<div class="navbar navbar-dark bg-light row m-3">
+<nav>
+  <div class="container">
+    <div class="content">
+      <h2 class="logo" routerLink="/"> <img src="src/assets/image/logo.jpg" width="50px" height="50px"> SKYPRINT </h2>
+        <ul class="row text-center">
 
-  <nav class="row">
-    <a class="nav-link col m-1 link-primary" routerLink="/">SKYPRINT </a>
+          <li class="active nav-link col" routerLink="/" routerLinkActive="active"
+            [routerLinkActiveOptions]="{exact: true}">Home</li>
+          <li class="nav-link link-info col" routerLink="/login" routerLinkActive="active">Login</li>
+          <li class="nav-link col " routerLink="/signup" routerLinkActive="active">sign up</li>
+          <li class="nav-link col" routerLink="/Card" routerLinkActive="active">Card</li>
+          <li class="nav-link col" routerLink="/our-us" routerLinkActive="active">our us</li>
+          <li class="nav-link col" routerLink="/products" routerLinkActive="active">Products</li>
+          <li class="nav-link col" routerLink="/call-us" routerLinkActive="active">Call Us</li>
 
-    <div class="col text-center" [class.show]="isOpen" id="navbarSupportedContent">
-      <ul class="row text-center">
-
-        <a class="active nav-link col" routerLink="/" routerLinkActive="active"
-          [routerLinkActiveOptions]="{exact: true}">Home</a>
-        <a class="nav-link link-info col" routerLink="/login" routerLinkActive="active">Login</a>
-        <a class="nav-link col " routerLink="/signup" routerLinkActive="active">sign up</a>
-        <a class="nav-link col" routerLink="/Card" routerLinkActive="active">Card</a>
-        <a class="nav-link col" routerLink="/our-us" routerLinkActive="active">our us</a>
-        <a class="nav-link col" routerLink="/products" routerLinkActive="active">Products</a>
-        <a class="nav-link col" routerLink="/call-us" routerLinkActive="active">Call Us</a>
-
-      </ul>
+        </ul>
     </div>
-
-    <div class="col " [class.show]="isOpen" id="navbarSupportedContent">
-      <button class=" btn btn-danger ml-1 text-right" [routerLink]="['src/app/compants/log/login']"> Logout </button>
-      <button class=" btn btn-primary mr-1" (click)="toggelNavBar()" type="button" data-toggle="collapse"
-        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-        aria-label="Toggle navigation">
-        <span>open</span>
-      </button>
-    </div>
-
-  </nav>
-</div>
+  </div>
+</nav>
