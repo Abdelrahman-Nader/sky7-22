@@ -38,7 +38,6 @@ import { SpinnerComponent } from './compants/spinner/spinner.component';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    HttpClient,
     HttpClientModule
   ],
   providers: [],
