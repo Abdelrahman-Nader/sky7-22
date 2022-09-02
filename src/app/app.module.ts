@@ -11,7 +11,7 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HomeComponent } from './compants/home/home.component';
 import { OurUsComponent } from './compants/our-us/our-us.component';
-import { ProductsComponent } from './compants/products/products.component';
+import { ProductsComponent } from "./compants/products/ProductsComponent";
 import { CallUsComponent } from './compants/call-us/call-us.component';
 import { CardComponent } from './compants/card/card.component';
 import { LoginComponent } from './compants/log/login/login.component';

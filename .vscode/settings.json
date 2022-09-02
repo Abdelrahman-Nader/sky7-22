@@ -1,5 +1,5 @@
 {
-    "editor.wordWrap": "off",
+    "editor.wordWrap": "on",
     "editor.fontSize": 18,
     "files.autoSave": "afterDelay",
     "editor.autoIndent": "full",
