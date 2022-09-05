@@ -1,7 +1,28 @@
 
-
-
-
+nav {
+  background: linear-gradient(to right, #950b0b, #440606);
+  color:aliceblue;
+}
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  width: 20%;
+  margin: 0;
+}
+li {
+  cursor: pointer;
+  font-size: 22px;
+  color: #fff;
+  text-decoration: none;
+}
 
 
 

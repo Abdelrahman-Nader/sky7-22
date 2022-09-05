@@ -1,3 +1,4 @@
+import { MainServService } from './../../services/main-serv.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service:MainServService) { }
 
   ngOnInit(): void {
   }
-
+  getProducts(){
+    this.service.getAllProducts().subscribe((res:any) => {
+console.log(res)
+    })
+  }
 }
