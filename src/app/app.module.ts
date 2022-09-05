@@ -13,6 +13,7 @@ import { LoginComponent } from './compants/log/login/login.component';
 import { LogoutComponent } from './compants/log/logout/logout.component';
 import { SignupComponent } from './compants/log/signup/signup.component';
 import { NavBarComponent } from './nav-bar/navbar.component';
+import { SpinnersComponent } from './spinner/spinners/spinners.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { NavBarComponent } from './nav-bar/navbar.component';
     CardComponent,
     LoginComponent,
     LogoutComponent,
-    SignupComponent
+    SignupComponent,
+    SpinnersComponent
   ],
   imports: [
     BrowserModule,
