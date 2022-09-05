@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductsComponent implements OnInit {
 
-  product:any[]= [];
+  products:any[]= [];
 
   constructor(private service:MainServService) { }
 
@@ -17,7 +17,7 @@ export class ProductsComponent implements OnInit {
   }
   getProducts(){
     this.service.getAllProducts().subscribe((res:any) => {
-      this.product = res
+      this.products = res
     })
   }
 }
