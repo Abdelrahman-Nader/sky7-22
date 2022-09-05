@@ -5,12 +5,6 @@
 export const environment = {
   baseApi: "https://fakestoreapi.com",
   _logoimge: "../assets/image/logo.jpg",
-  get logoimge() {
-    return this._logoimge;
-  },
-  set logoimge(value) {
-    this._logoimge = value;
-  },
   production: false
 };
 
