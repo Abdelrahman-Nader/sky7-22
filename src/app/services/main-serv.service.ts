@@ -9,10 +9,17 @@ export class MainServService {
 
   constructor(private http:HttpClient) { }
   getAllProducts(){
-    return this.http.get( environment.baseApi + '/products')
+    return this.http.get( environment.baseApi + 'products')
   }
 
   logo(){
     return this.http.get(environment._logoimge)
   }
+  getAllCategoris(){
+    return this.http.get( environment.baseApi + 'products/categories')
+  }
+  getproductsCategoriey(keyword: string){
+    return this.http.get( environment.baseApi + 'products/categories/'+keyword)
+  }
 }
+

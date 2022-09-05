@@ -9,11 +9,14 @@ import { Component, OnInit } from '@angular/core';
 export class ProductsComponent implements OnInit {
 
   products: any[] = [];
+  categories: any[] = [];
+
 
   constructor(private service: MainServService) { }
 
   ngOnInit(): void {
     this.getProducts()
+    this.getCategories()
   }
   getProducts() {
     this.service.getAllProducts().subscribe((res: any) => {
@@ -22,4 +25,24 @@ export class ProductsComponent implements OnInit {
       alert("error")
     },)
   }
+
+  getCategories() {
+    this.service.getAllCategoris().subscribe((res: any) => {
+      this.categories = res
+      console.log(res)
+    }, error => {
+      alert("error")
+    },)
+  }
+  filterCategorie(event: any){
+    let value = event.target.value;
+    this.getproud(value)
+    console.log(value)
+  }
+  getproud(keyword:any){
+    this.service.getproductsCategoriey(keyword).subscribe((res: any) => {
+      this.products = res
+    })
+  }
 }
+

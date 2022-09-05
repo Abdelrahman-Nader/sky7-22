@@ -1,12 +1,9 @@
 <div class="box mt-5">
   <div class=" category my-2 w-2">
     <label for="" class="my-1">Category:</label>
-    <select class="form-control">
-      <option value="one">one</option>
-      <option value="two">two</option>
-      <option value="three">three</option>
-      <option value="four">four</option>
-      <option value="five">five</option>
+    <select class="form-control" (change)="filterCategorie($event)">
+      <option value="all" select > ALL </option>
+      <option value="{{option}}" *ngFor="let option of categories">{{option}}</option>
     </select>
   </div>
   <div class="row">
