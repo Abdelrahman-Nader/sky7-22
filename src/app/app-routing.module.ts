@@ -1,4 +1,4 @@
-import { ProductsComponent } from "./compants/products/ProductsComponent";
+import { ProductsComponent } from "./compants/products/products.component";
 import { SignupComponent } from './compants/log/signup/signup.component';
 import { LoginComponent } from './compants/log/login/login.component';
 import { OurUsComponent } from './compants/our-us/our-us.component';

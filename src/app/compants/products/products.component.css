@@ -1,6 +1,16 @@
 .item{
-  width:300px;
+  /* width: 300px; */
+  display: flex;
+  align-items: space-around;
   text-decoration: none;
+
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-right: calc(-.5 * var(--bs-gutter-x));
+  margin-left: calc(-.5 * var(--bs-gutter-x));
+  align-content: space-around;
+  justify-content: space-around;
+  align-items: center;
   color: #333;
   margin: 15px;
   display: inline-block;
@@ -9,7 +19,7 @@
   transition: all 0.3s ease-in-out;
 }
 img{
-  width:100%;
+  width: 200px;
   height: 200px;
   border-radius: 10px;
 }
@@ -38,5 +48,8 @@ span{
   background-color: #f1b4b4;
   padding: 3px 7px;
   border-radius: 30px;
+}
+.category{
+  width: 300px;
 }
 
