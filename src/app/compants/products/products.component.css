@@ -1,5 +1,5 @@
 .item{
-  width: 300px;
+  /* width: 300px; */
   display: flex;
   align-items: space-around;
   text-decoration: none;
@@ -19,7 +19,7 @@
   transition: all 0.3s ease-in-out;
 }
 img{
-  width:100%;
+  width: 200px;
   height: 200px;
   border-radius: 10px;
 }
