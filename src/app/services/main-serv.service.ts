@@ -6,7 +6,7 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 })
 export class MainServService {
 
-  constructor(private http:HttpClientModule) { }
+  constructor(private http:HttpClient) { }
   getAllProducts(){
     return this.http.get('https://fakestoreapi.com/products')
   }
