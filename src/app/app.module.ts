@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 
@@ -11,7 +11,7 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HomeComponent } from './compants/home/home.component';
 import { OurUsComponent } from './compants/our-us/our-us.component';
-import { ProductsComponent } from "./compants/products/ProductsComponent";
+import { ProductsComponent } from "./compants/products/products.component";
 import { CallUsComponent } from './compants/call-us/call-us.component';
 import { CardComponent } from './compants/card/card.component';
 import { LoginComponent } from './compants/log/login/login.component';
@@ -24,6 +24,7 @@ import { SpinnerComponent } from './compants/spinner/spinner.component';
   declarations: [
     NavBarComponent,
     AppComponent,
+    Component,
     HomeComponent,
     OurUsComponent,
     ProductsComponent,
