@@ -1,4 +1,6 @@
+import { environment } from './../../environments/environment.prod';
 import { Component } from '@angular/core';
+import { MainServService } from '../services/main-serv.service';
 
 @Component({
   selector: 'navbar',
@@ -7,9 +9,17 @@ import { Component } from '@angular/core';
 })
 export class NavBarComponent {
 
+  constructor(private service: MainServService) { }
+  ngOnInit(): void {
+    this._logoimge()
+  }
+
   isOpen: boolean= false
   toggelNavBar() {
     this.isOpen = !this.isOpen
+  }
+  _logoimge(){
+    return this.service.logo()
   }
 
 };

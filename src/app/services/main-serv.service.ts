@@ -11,4 +11,8 @@ export class MainServService {
   getAllProducts(){
     return this.http.get( environment.baseApi + '/products')
   }
+
+  logo(){
+    return this.http.get(environment._logoimge)
+  }
 }
