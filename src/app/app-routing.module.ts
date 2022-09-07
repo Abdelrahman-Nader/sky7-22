@@ -1,4 +1,3 @@
-// import { ProductsComponent } from "./compants/products/products.component";
 import { SignupComponent } from './compants/log/signup/signup.component';
 import { LoginComponent } from './compants/log/login/login.component';
 import { OurUsComponent } from './compants/our-us/our-us.component';
@@ -8,7 +7,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './compants/home/home.component';
 import { LogoutComponent } from './compants/log/logout/logout.component';
 import { NgModule } from '@angular/core';
-import { Products2Component } from "./compants/products2/Products2Component.1";
+import { ProductsComponent } from './compants/products/products.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -16,7 +15,7 @@ const routes: Routes = [
   { path: 'call-us', component: CallUsComponent },
   { path: 'Card', component: CardComponent },
   { path: 'our-us', component: OurUsComponent },
-  { path: 'products', component: Products2Component },
+  { path: 'products', component: ProductsComponent },
   { path: 'login', component: LoginComponent },
   { path: 'logout', component: LogoutComponent },
   { path: 'signup', component: SignupComponent },
