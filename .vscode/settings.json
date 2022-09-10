@@ -4,7 +4,6 @@
   "files.autoSave": "afterDelay",
   "editor.autoIndent": "full",
   "editor.columnSelection": true,
-  "editor.experimental.stickyScroll.enabled": true,
   "editor.guides.bracketPairs": "active",
   "editor.hover.delay": 300,
   "editor.mouseWheelZoom": true,
@@ -17,5 +16,6 @@
   "cSpell.words": [
     "compants",
     "toggel"
-  ]
+  ],
+  "editor.stickyScroll.enabled": true
 }
