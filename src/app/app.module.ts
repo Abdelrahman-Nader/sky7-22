@@ -1,4 +1,4 @@
-import { NgModule, Component } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -24,7 +24,6 @@ import { ProductsComponent } from './compants/products/products.component';
   declarations: [
     NavBarComponent,
     AppComponent,
-    Component,
     HomeComponent,
     OurUsComponent,
     CallUsComponent,
