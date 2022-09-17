@@ -8,17 +8,18 @@ import { MainServService } from 'src/app/services/main-serv.service';
 })
 export class ProductsComponent implements OnInit {
 
-  constructor(private service: MainServService ) { }
-
   products: any[] = [];
 categories: any[] = [];
+  constructor(private service: MainServService ) { }
+
+
 ngOnInit(): void {
     this.getProducts();
     this.getCategories();
 }
 getProducts() {
-    this.service.getAllProducts().subscribe((res: any) => {
-        this.products = res;
+    this.service.getAllProducts().subscribe ((res: any) => {
+        this.products = res
     }, error => {
         alert("error");
     });
