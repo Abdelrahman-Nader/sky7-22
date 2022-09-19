@@ -11,15 +11,15 @@ export class NavBarComponent {
 
   constructor(private service: MainServService) { }
   ngOnInit(): void {
-    this._logoimge()
+
   }
 
   isOpen: boolean= false
   toggelNavBar() {
     this.isOpen = !this.isOpen
   }
-  _logoimge(){
-    return this.service.logo()
-  }
+
+
+
 
 };

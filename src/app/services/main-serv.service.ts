@@ -19,7 +19,7 @@ export class MainServService {
     return this.http.get( environment.baseApi + 'products/categories')
   }
   getproductsCategoriey(keyword: string){
-    return this.http.get( environment.baseApi + 'products/categories/'+keyword)
+    return this.http.get( environment.baseApi + 'products/category/'+keyword)
   }
 }
 

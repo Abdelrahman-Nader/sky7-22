@@ -34,8 +34,8 @@ getCategories() {
 }
 filterCategorie(event: any) {
     let value = event.target.value;
-    this.getproud(value);
     console.log(value);
+    this.getproud(value);
 }
 getproud(keyword: any) {
     this.service.getproductsCategoriey(keyword).subscribe((res: any) => {
