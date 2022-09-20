@@ -10,6 +10,7 @@ export class ProductsComponent implements OnInit {
 
   products: any[] = [];
 categories: any[] = [];
+loading: boolean =false
   constructor(private service: MainServService ) { }
 
 
@@ -18,27 +19,34 @@ ngOnInit(): void {
     this.getCategories();
 }
 getProducts() {
+  this.loading = true;
     this.service.getAllProducts().subscribe ((res: any) => {
         this.products = res
+        this.loading =false;
     }, error => {
+      this.loading =false;
         alert("error");
     });
 }
 getCategories() {
+  this.loading = true;
     this.service.getAllCategoris().subscribe((res: any) => {
         this.categories = res;
-        console.log(res);
+        this.loading =false;
     }, error => {
+      this.loading =false;
         alert("error");
     });
 }
 filterCategorie(event: any) {
+
     let value = event.target.value;
-    console.log(value);
-    this.getproud(value);
+    (value =="all") ? this.getProducts() : this.getproud(value)
 }
 getproud(keyword: any) {
+  this.loading = true;
     this.service.getproductsCategoriey(keyword).subscribe((res: any) => {
+      this.loading = false
         this.products = res;
     });
 }

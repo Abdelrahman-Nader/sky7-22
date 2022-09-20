@@ -1,12 +1,12 @@
 <div class="box mt-5">
-  <div class=" category my-2 w-2">
+  <div class=" category my-2 w-2 ">
     <label for="" class="my-1">Category:</label>
     <select class="form-control" (change)="filterCategorie($event)">
       <option value="all" select > ALL </option>
       <option value="{{option}}" *ngFor="let option of categories">{{option}}</option>
     </select>
   </div>
-  <div class="row">
+  <div class="row" *ngIf="!loading">
     <div class="col-md-3 col-sm-12" *ngFor="let items of products">
       <div class="item">
         <img src="{{items.image}}" alt="">
@@ -21,4 +21,8 @@
       </div>
     </div>
   </div>
+
+</div>
+<div class="d-flex justify-content-center" *ngIf="loading">
+  <app-spinners></app-spinners>
 </div>
