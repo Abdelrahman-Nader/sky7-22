@@ -19,6 +19,8 @@ import { SignupComponent } from './compants/log/signup/signup.component';
 import { NavBarComponent } from './nav-bar/navbar.component';
 import { SpinnersComponent } from './spinner/spinners/spinners.component';
 import { ProductsComponent } from './compants/products/products.component';
+import { SelectComponent } from './shared/select/select.component';
+import { SingleProductComponent } from './products/single-product/single-product.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { ProductsComponent } from './compants/products/products.component';
     LogoutComponent,
     SignupComponent,
     SpinnersComponent,
-    ProductsComponent
+    ProductsComponent,
+    SelectComponent,
+    SingleProductComponent
   ],
   imports: [
     BrowserModule,

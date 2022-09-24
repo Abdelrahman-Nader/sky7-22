@@ -50,5 +50,10 @@ getproud(keyword: any) {
         this.products = res;
     });
 }
+addToCard(event:any){
+  console.log(event)
+
+}
+
 
 }
