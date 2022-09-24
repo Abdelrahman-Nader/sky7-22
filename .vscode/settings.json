@@ -1,21 +1,20 @@
 {
-    "editor.wordWrap": "on",
-    "editor.fontSize": 18,
-    "files.autoSave": "afterDelay",
-    "editor.autoIndent": "full",
-    "editor.columnSelection": true,
-    "editor.guides.bracketPairs": "active",
-    "editor.hover.delay": 300,
-    "editor.mouseWheelZoom": true,
-    "editor.renderFinalNewline": true,
-    "editor.smartSelect.selectLeadingAndTrailingWhitespace": true,
-    "editor.unfoldOnClickAfterEndOfLine": true,
-    "editor.cursorBlinking": "blink",
-    "editor.find.cursorMoveOnType": false,
-    "editor.find.loop": false,
-    "cSpell.words" :[
-      "compants",
-      "toggel"
-    ],
-    "editor.stickyScroll.enabled": true
+  "editor.wordWrap": "on",
+  "editor.fontSize": 18,
+  "files.autoSave": "afterDelay",
+  "editor.autoIndent": "full",
+  "editor.guides.bracketPairs": "active",
+  "editor.hover.delay": 300,
+  "editor.mouseWheelZoom": true,
+  "editor.renderFinalNewline": true,
+  "editor.smartSelect.selectLeadingAndTrailingWhitespace": true,
+  "editor.unfoldOnClickAfterEndOfLine": true,
+  "editor.cursorBlinking": "blink",
+  "editor.find.cursorMoveOnType": false,
+  "editor.find.loop": false,
+  "cSpell.words": [
+    "compants",
+    "toggel"
+  ],
+  "editor.stickyScroll.enabled": true
 }
