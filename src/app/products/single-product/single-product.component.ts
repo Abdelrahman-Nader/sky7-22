@@ -8,6 +8,8 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 export class SingleProductComponent implements OnInit {
   @Input() data: any = {}
   @Output() item = new EventEmitter();
+  addButton:boolean = false;
+  amount:number = 0;
 
   constructor() { }
 

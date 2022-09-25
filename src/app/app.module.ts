@@ -21,6 +21,7 @@ import { SpinnersComponent } from './spinner/spinners/spinners.component';
 import { ProductsComponent } from './compants/products/products.component';
 import { SelectComponent } from './shared/select/select.component';
 import { SingleProductComponent } from './products/single-product/single-product.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { SingleProductComponent } from './products/single-product/single-product
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
