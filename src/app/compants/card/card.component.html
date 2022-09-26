@@ -21,7 +21,7 @@
           </thead>
           <tbody>
 
-            <tr *ngFor="let item of cartProducts">
+            <tr *ngFor="let item of cartProducts; let index = index">
               <td class="p-4">
                 <div class="media align-items-center">
                   <img src="{{item.item.image}}" class="d-unblock ui-w-40 ui-bordered mr-4" alt="">
@@ -32,7 +32,9 @@
               </td>
               <td class="text-right font-weight-semibold align-middle p-4">{{item.item.price}}</td>
               <td class="align-middle p-4">
-                <input type="number" class="form-control" [(ngModel)]="item.quantity">
+                <button class="btn btn-dark" (click)="plusAmount(index)">+</button>
+                <input type="number" class="form-control" value="{{item.quantity}}" [(ngModel)]='item.quantity' >
+                <button class="btn btn-dark" (click)="minsAmount(index)">-</button>
               </td>
               <td class="text-right font-weight-semibold align-middle p-4">{{item.item.price * item.quantity}}</td>
               <td class="text-center align-middle px-0"><a href="#" class="shop-tooltip close float-none text-danger"

@@ -29,5 +29,17 @@ for(let i in this.cartProducts){
   this.totalPrice += this.cartProducts[i].item.price * this.cartProducts[i].quantity;
 }
   }
+  minsAmount(index:number){
+    this.cartProducts[index].quantity--
+    this.getCartTotalPrice()
+    localStorage.setItem("cart", JSON.stringify(this.cartProducts))
+  }
+  plusAmount(index:number){
+    
+    this.cartProducts[index].quantity++
+    this.getCartTotalPrice()
+    localStorage.setItem("cart", JSON.stringify(this.cartProducts))
+  }
+
 }
 

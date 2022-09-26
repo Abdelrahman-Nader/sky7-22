@@ -53,10 +53,10 @@ export class ProductsComponent implements OnInit {
   }
   addToCard(event: any) {
     if ("cart" in localStorage) {
-      
+
       this.cartProducts = JSON.parse(localStorage.getItem("cart")!)
 
-      let exist = this.cartProducts.find(item => item.item.id === event.item.id)
+      let exist = this.cartProducts.find(item => item.item.id === event.item.id )
 
       if (exist) {
         alert("Products is already in Your Cart")
@@ -71,6 +71,8 @@ export class ProductsComponent implements OnInit {
 
 
   }
+  listenerButton(){
 
+}
 
 }
