@@ -9,13 +9,18 @@ export class SingleProductComponent implements OnInit {
   @Input() data: any = {}
   @Output() item = new EventEmitter();
   addButton:boolean = false;
-  amount:number = 0;
+  amount:number = 1;
 
   constructor() { }
 
   ngOnInit(): void {
   }
   add(){
-    this.item.emit(this.data)
+    if(this.amount > 0){
+
+      this.item.emit({item:this.data, quantity:this.amount})
+    } else {
+      alert("Please enter the quantity")
+    }
   }
 }
