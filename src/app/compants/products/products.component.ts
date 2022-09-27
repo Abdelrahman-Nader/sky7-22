@@ -26,7 +26,7 @@ export class ProductsComponent implements OnInit {
       this.loading = false;
     }, error => {
       this.loading = false;
-      alert("error");
+      alert(error);
     });
   }
   getCategories() {
@@ -36,7 +36,7 @@ export class ProductsComponent implements OnInit {
       this.loading = false;
     }, error => {
       this.loading = false;
-      alert("error");
+      alert(error);
     });
   }
   filterCategorie(event: any) {
@@ -53,11 +53,11 @@ export class ProductsComponent implements OnInit {
   }
   addToCard(event: any) {
     if ("cart" in localStorage) {
-      console.log(localStorage)
+
       this.cartProducts = JSON.parse(localStorage.getItem("cart")!)
-      console.log(this.cartProducts)
-      let exist = this.cartProducts.find(item => item.id === event.id)
-      console.log(exist)
+
+      let exist = this.cartProducts.find(item => item.item.id === event.item.id )
+
       if (exist) {
         alert("Products is already in Your Cart")
       } else {
@@ -71,6 +71,8 @@ export class ProductsComponent implements OnInit {
 
 
   }
+  listenerButton(){
 
+}
 
 }
