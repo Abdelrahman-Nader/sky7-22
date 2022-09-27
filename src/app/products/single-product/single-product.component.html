@@ -7,9 +7,9 @@
   <div class="px-3 mb-2 d-flex
 justify-content-between align-items-center">
     <button class="btn btn-success" *ngIf="!addButton" (click)="addButton = true">add to card</button>
-    <div class="d-flex w-50" >
+    <div class="d-flex w-50" *ngIf="addButton">
       <input type="number" class="form-control" [(ngModel)]="amount">
-      <button class="btn btn-danger" (click)="add()" *ngIf="addButton">Add</button>
+      <button class="btn btn-danger" (click)="add()">Add</button>
     </div>
     <span>{{data.price}}</span>
   </div>
