@@ -1,15 +1,14 @@
-<div class="item">
-  <img src="{{data.image}}" alt="">
-  <div class="body">
+<div class="contanier">
+  <div class="cart">
+    <img src="{{data.image}}" alt="">
     <h4> {{data.title}} </h4>
     <P>{{data.description}}</P>
   </div>
-  <div class="px-3 mb-2 d-flex
-justify-content-between align-items-center">
-    <button class="btn btn-success" *ngIf="!addButton" (click)="addButton = true">add to card</button>
-    <div class="d-flex w-50" *ngIf="addButton">
-      <input type="number" class="form-control" [(ngModel)]="amount">
-      <button class="btn btn-danger" (click)="add()">Add</button>
+  <div >
+    <button  *ngIf="!addButton" (click)="addButton = true">add to card</button>
+    <div  *ngIf="addButton">
+      <input type="number"  [(ngModel)]="amount">
+      <button  (click)="add()">Add</button>
     </div>
     <span>{{data.price}}</span>
   </div>
