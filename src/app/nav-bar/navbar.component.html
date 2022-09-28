@@ -1,19 +1,17 @@
-<nav>
-  <div class="container">
-    <div class="content">
-      <h2 class="logo" routerLink="/"> <img width="50px" height="50px"> SKYPRINT </h2>
-        <ul class="row text-center">
+<header>
 
-          <li class="active nav-link col" routerLink="/" routerLinkActive="active"
-            [routerLinkActiveOptions]="{exact: true}">Home</li>
-          <li class="nav-link link-info col" routerLink="/login" routerLinkActive="active">Login</li>
-          <li class="nav-link col " routerLink="/signup" routerLinkActive="active">sign up</li>
-          <li class="nav-link col" routerLink="/Card" routerLinkActive="active">Card</li>
-          <li class="nav-link col" routerLink="/our-us" routerLinkActive="active">our us</li>
-          <li class="nav-link col" routerLink="/products" routerLinkActive="active">Products</li>
-          <li class="nav-link col" routerLink="/call-us" routerLinkActive="active">Call Us</li>
+  <h2 routerLink="/"> <img width="50px" height="50px"> SKYPRINT </h2>
+  <nav>
+    <ul>
+      <li routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+        Home</li>
+      <li routerLink="/login" routerLinkActive="active">Login</li>
+      <li routerLink="/signup" routerLinkActive="active">sign up</li>
+      <li routerLink="/Card" routerLinkActive="active">Card</li>
+      <li routerLink="/our-us" routerLinkActive="active">our us</li>
+      <li routerLink="/products" routerLinkActive="active">Products</li>
+      <li routerLink="/call-us" routerLinkActive="active">Call Us</li>
+    </ul>
+  </nav>
 
-        </ul>
-    </div>
-  </div>
-</nav>
+</header>
