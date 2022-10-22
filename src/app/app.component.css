@@ -3,3 +3,11 @@ box-sizing: border-box;
 margin: 0;
 padding: 0;
 }
+.d-flex{
+  display: flex!important;
+  align-content: space-around;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10%;
+    background-color: rgb(255, 255, 255);
+}
