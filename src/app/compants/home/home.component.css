@@ -1,0 +1,19 @@
+.landing {
+	/* background-color: rgba(68, 68, 68, 0.226); */
+	height: calc(100vh);
+  z-index: 1;
+
+}
+
+.landing .intro-text {
+	/* position: absolute; */
+	/* background-color: rgba(68, 68, 68, 0.226); */
+	/* left: 50%; */
+	/* top: 50%; */
+	text-align: center;
+	/* transform: translate(-50%, -50%); */
+	width: 320px;
+	max-width: 100%;
+	transition: 0.6s;
+  z-index: 1;
+}
