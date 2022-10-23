@@ -5,7 +5,7 @@
 export const environment = {
   baseApi: "https://fakestoreapi.com/",
 
-  _logoimge: "../assets/image/logo.jpg",
+  _logoimge: "./assets/image/logo.jpg",
   production: false
 };
 

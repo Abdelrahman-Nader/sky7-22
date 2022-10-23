@@ -22,6 +22,7 @@ import { ProductsComponent } from './compants/products/products.component';
 import { SelectComponent } from './shared/select/select.component';
 import { SingleProductComponent } from './products/single-product/single-product.component';
 import { FormsModule } from '@angular/forms';
+import { DetailsComponent } from './products/details/details.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { FormsModule } from '@angular/forms';
     SpinnersComponent,
     ProductsComponent,
     SelectComponent,
-    SingleProductComponent
+    SingleProductComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,
