@@ -8,6 +8,7 @@ import { HomeComponent } from './compants/home/home.component';
 import { LogoutComponent } from './compants/log/logout/logout.component';
 import { NgModule } from '@angular/core';
 import { ProductsComponent } from './compants/products/products.component';
+import { DetailsComponent } from './products/details/details.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -19,6 +20,8 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'logout', component: LogoutComponent },
   { path: 'signup', component: SignupComponent },
+  { path: 'details/:id', component: DetailsComponent },
+
 ];
 
 @NgModule({
