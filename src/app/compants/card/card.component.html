@@ -3,6 +3,10 @@
   <div class="card">
     <div class="card-header">
       <h2>Shopping Cart</h2>
+      <div class="mt-4 container">
+        <label class="text-muted font-weight-normal">Item in your Card <span class="text-danger">{{cartProducts.length}}</span></label>
+
+      </div>
     </div>
     <div class="card-body">
       <div class="table-responsive">
@@ -14,9 +18,7 @@
               <th class="text-right py-3 px-4" style="width: 100px;">Price</th>
               <th class="text-center py-3 px-4" style="width: 120px;">Quantity</th>
               <th class="text-right py-3 px-4" style="width: 100px;">Total</th>
-              <th class="text-center align-middle py-3 px-0" style="width: 40px;"><a href="#"
-                  class="shop-tooltip float-none text-light" title="" data-original-title="Clear cart"><i
-                    class="ino ion-md-trash"></i></a></th>
+              <th class="text-center align-middle py-3 px-0" style="width: 40px;"> <a  class="btn btn-danger" (click)="clearCard()"> clear card</a></th>
             </tr>
           </thead>
           <tbody>
@@ -26,7 +28,7 @@
                 <div class="media align-items-center">
                   <img src="{{item.item.image}}" class="d-unblock ui-w-40 ui-bordered mr-4" alt="">
                   <div class="media-body">
-                    <a href="#" class="d-block text-dark">{{item.item.title}}</a>
+                    <a routerLink="/details/{{item.item.id}}" class="d-block text-dark">{{item.item.title}}</a>
                   </div>
                 </div>
               </td>
@@ -45,11 +47,8 @@
       </div>
       <!-- / Shopping cart table -->
 
-      <div class="d-flex flex-wrap justify-content-between align-items-center pb-4">
-        <div class="mt-4">
-          <label class="text-muted font-weight-normal">Promocode</label>
-          <input type="text" placeholder="ABC" class="form-control">
-        </div>
+      <div class="d-flex flex-wrap justify-content-flex-end align-items-center pb-4">
+
         <div class="d-flex">
           <div class="text-right mt-4 mr-5">
             <label class="text-muted font-weight-normal m-0">Discount</label>

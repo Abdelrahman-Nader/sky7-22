@@ -40,8 +40,14 @@ export class CardComponent implements OnInit {
     this.getCartTotalPrice()
     localStorage.setItem("cart", JSON.stringify(this.cartProducts))
   }
-  detect() {
 
+  clearCard() {
+    this.cartProducts = []
+    this.getCartTotalPrice()
+    localStorage.setItem("cart", JSON.stringify(this.cartProducts))
+  }
+
+  detect() {
     this.getCartTotalPrice()
     localStorage.setItem("cart", JSON.stringify(this.cartProducts))
   }

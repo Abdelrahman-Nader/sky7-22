@@ -8,7 +8,7 @@
     <button  *ngIf="!addButton" (click)="addButton = true">add to card</button>
     <div  *ngIf="addButton">
       <input type="number"  [(ngModel)]="amount">
-      <button  (click)="add()">Add</button>
+      <button  (click)="add(); addButton= false">Add</button>
     </div>
     <span>{{data.price}}</span>
   </div>

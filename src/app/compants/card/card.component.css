@@ -31,3 +31,15 @@ body{
     color: rgb(0, 0, 0);
     border-color: none !important;
 }
+.d-flex {
+  display: flex!important;
+  justify-content: flex-end;
+}
+label {
+  display: block;
+}
+.mt-4 {
+  margin-top: 1.5rem!important;
+  display: flex;
+  justify-content: space-between;
+}
