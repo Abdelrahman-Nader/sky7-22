@@ -1,7 +1,7 @@
 <div class="contanier box mt-5">
-  <div class=" category my-2 w-2 ">
+  <!-- <div class=" category my-2 w-2 ">
     <app-select [data]="categories" [title]="'categories'" (selectedValue)="filterCategorie($event)"></app-select>
-  </div>
+  </div> -->
   <div class="row" *ngIf="!loading">
     <div class="col-md-3 col-sm-12" *ngFor="let items of products">
       <app-single-product [data]="items" (item)="addToCard($event)"></app-single-product>

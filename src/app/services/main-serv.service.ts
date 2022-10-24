@@ -10,20 +10,20 @@ export class MainServService {
 
   constructor(private http:HttpClient) { }
   getAllProducts(){
-    return this.http.get(environment.baseApi + 'products')
+    return this.http.get("../assets/data.json")
   }
 
   logo(){
     return this.http.get(environment._logoimge)
   }
   getAllCategoris(){
-    return this.http.get( environment.baseApi + 'products/categories')
+    return this.http.get("../assets/data.json")
   }
   getproductsCategoriey(keyword: string){
-    return this.http.get( environment.baseApi + 'products/category/'+keyword)
+    return this.http.get( "../assets/data.json"+keyword)
   }
   getproductsById(id: any){
-    return this.http.get( environment.baseApi + 'products/'+id)
+    return this.http.get( "../assets/data.json"+id)
   }
 }
 

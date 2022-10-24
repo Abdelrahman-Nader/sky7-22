@@ -1,8 +1,8 @@
 <div class="contanier">
   <div class="cart">
-    <img src="{{data.image}}" alt="" routerLink="/details/{{data.id}}">
-    <h4> {{data.title}} </h4>
-    <P routerLink="/details/{{data.id}}">{{data.description}}</P>
+    <img src="{{data.url}}" alt="" routerLink="/details-{{data.id}}">
+    <h4> {{data.name}} </h4>
+    <P routerLink="/details-data.id">{{data.description}}</P>
   </div>
   <div >
     <button  *ngIf="!addButton" (click)="addButton = true">add to card</button>
