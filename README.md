@@ -1,3 +1,10 @@
+
+In this project will be able to
+add product
+Delete only one product or delete the entire list
+You can see how many products are in the basket
+You can add an amount directly from the basket
+This is what I have learned so far
 # MainSkyPrint
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.2.
@@ -24,4 +31,6 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 ## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference]
+(https://angular.io/cli) page.
+
