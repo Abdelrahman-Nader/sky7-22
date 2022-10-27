@@ -1,8 +1,10 @@
 <div class="contanier">
   <div class="cart">
-    <img src="{{data.url}}" alt="" routerLink="/details-{{data.id}}">
+    <a [routerLink]="['/details, data.id']">
+    <img src="{{data.url}}" alt="">
     <h4> {{data.name}} </h4>
-    <P routerLink="/details-data.id">{{data.description}}</P>
+    <P>{{data.description}}</P>
+  </a>
   </div>
   <div >
     <button  *ngIf="!addButton" (click)="addButton = true">add to card</button>
@@ -13,3 +15,5 @@
     <span>{{data.price}}</span>
   </div>
 </div>
+
+

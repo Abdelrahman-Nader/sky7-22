@@ -23,7 +23,7 @@ export class MainServService {
     return this.http.get( "../assets/data.json"+keyword)
   }
   getproductsById(id: any){
-    return this.http.get( "../assets/data.json"+id)
+    return this.http.get( "['/details, data.id']"+id)
   }
 }
 

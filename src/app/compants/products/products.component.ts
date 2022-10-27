@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { observable } from 'rxjs';
 import { MainServService } from 'src/app/services/main-serv.service';
 
 @Component({
@@ -12,7 +13,7 @@ export class ProductsComponent implements OnInit {
   categories: any[] = [];
   loading: boolean = false;
   cartProducts: any[] = [];
-  constructor(private service: MainServService) { }
+  constructor(private service: MainServService){ }
 
 
   ngOnInit(): void {
