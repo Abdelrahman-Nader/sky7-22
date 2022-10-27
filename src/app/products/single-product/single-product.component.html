@@ -1,14 +1,16 @@
 <div class="contanier">
   <div class="cart">
-    <img src="{{data.url}}" alt="" routerLink="/details-{{data.id}}">
+    <a routerLink="/assets/data.json">
+    <img src="{{data.url}}" alt="">
     <h4> {{data.name}} </h4>
-    <P routerLink="/details-data.id">{{data.description}}</P>
+    <P>{{data.description}}</P>
+  </a>
   </div>
   <div >
-    <button  *ngIf="!addButton" (click)="addButton = true">add to card</button>
+    <button  *ngIf="!addButton" (click)="addButton = true" class="btn btn-primary">add to card</button>
     <div  *ngIf="addButton">
       <input type="number"  [(ngModel)]="amount">
-      <button  (click)="add(); addButton= false">Add</button>
+      <button  (click)="add(); addButton= false" class="btn btn-primary" >Add</button>
     </div>
     <span>{{data.price}}</span>
   </div>
