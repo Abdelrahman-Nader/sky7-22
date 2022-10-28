@@ -10,7 +10,7 @@ import { MainServService } from 'src/app/services/main-serv.service';
 export class DetailsComponent implements OnInit {
   id: any;
   data: any = [];
-  proDetails: any = [];
+  @Output() proDetails: any = [];
   loading: boolean = false;
   constructor(private route: ActivatedRoute, private service: MainServService) {
     this.id = this.route.snapshot.paramMap.get('id')
@@ -28,7 +28,8 @@ export class DetailsComponent implements OnInit {
 
     this.data = response.filter((i: any) =>{
       if (i.id === this.id){
-        
+        this.proDetails.push(i.id)
+        console.log(this.proDetails)
       }
 
     })[0];
