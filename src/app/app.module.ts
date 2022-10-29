@@ -23,6 +23,7 @@ import { SelectComponent } from './shared/select/select.component';
 import { SingleProductComponent } from './products/single-product/single-product.component';
 import { FormsModule } from '@angular/forms';
 import { DetailsComponent } from './products/details/details.component';
+import { FormValidationComponent } from './compants/form-validation/form-validation.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { DetailsComponent } from './products/details/details.component';
     ProductsComponent,
     SelectComponent,
     SingleProductComponent,
-    DetailsComponent
+    DetailsComponent,
+    FormValidationComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,23 @@
+/* .row {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-right: calc(-.5 * var(--bs-gutter-x));
+  margin-left: calc(-.5 * var(--bs-gutter-x));
+  justify-content: space-around;
+  align-items: center;
+  align-content: space-around;
+  flex-wrap: wrap;
+} */
+.form-check {
+  display: flex;
+  justify-content: center;
+  min-height: 1.5rem;
+  padding-left: 1.5em;
+  margin: 1.125rem 1.125rem;
+}
+.col-md-6 {
+  flex: 0 0 auto;
+  width: 8%;
+}

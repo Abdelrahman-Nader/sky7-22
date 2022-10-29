@@ -9,6 +9,7 @@ import { LogoutComponent } from './compants/log/logout/logout.component';
 import { NgModule } from '@angular/core';
 import { ProductsComponent } from './compants/products/products.component';
 import { DetailsComponent } from './products/details/details.component';
+import { FormValidationComponent } from './compants/form-validation/form-validation.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -21,6 +22,7 @@ const routes: Routes = [
   { path: 'logout', component: LogoutComponent },
   { path: 'signup', component: SignupComponent },
   { path: 'details/:id', component: DetailsComponent },
+  { path: 'form-validation', component: FormValidationComponent },
 
 ];
 

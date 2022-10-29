@@ -44,18 +44,17 @@ export class CardComponent implements OnInit {
   clearCard() {
     if(this.cartProducts = []){
       alert('Are you sure')
+      // this.cartProducts = []
       this.getCartTotalPrice()
       localStorage.setItem("cart", JSON.stringify(this.cartProducts))
-
-      
     } else {
-      alert("Please enter the quantity")
+      this.cartProducts = []
+      this.getCartTotalPrice()
+      localStorage.setItem("cart", JSON.stringify(this.cartProducts))
     }
 
 
-    this.cartProducts = []
-    this.getCartTotalPrice()
-    localStorage.setItem("cart", JSON.stringify(this.cartProducts))
+
   }
 
   detect() {
