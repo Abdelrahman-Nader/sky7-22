@@ -10,34 +10,19 @@ import { MainServService } from 'src/app/services/main-serv.service';
 export class DetailsComponent implements OnInit {
   id: any;
   data: any = [];
-  @Output() proDetails: any = [];
   loading: boolean = false;
-  constructor(private route: ActivatedRoute, private service: MainServService) {
-    this.id = this.route.snapshot.paramMap.get('id')
-    console.log(this.id)
-  }
+
+  constructor(private route: ActivatedRoute, private service: MainServService) { }
 
   ngOnInit(): void {
+    this.id = this.route.snapshot.paramMap.get('id')
     this.getproductsById();
   }
 
-
-  getproductsById(){
-  this.service.getAllProducts().subscribe((response:any): void => {
-    console.log(response, 'response');
-
-    this.data = response.filter((i: any) =>{
-      if (i.id === this.id){
-        this.proDetails.push(i.id)
-        console.log(this.proDetails)
-      }
-
-    })[0];
-  });
-
-}
-
-
-
+  getproductsById() {
+    this.service.getAllProducts().subscribe((response: any): void => {
+      this.data = response.filter((item: any) => item.id === +this.id)[0];
+    });
+  }
 
 }
