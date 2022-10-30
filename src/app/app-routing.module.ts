@@ -10,6 +10,7 @@ import { NgModule } from '@angular/core';
 import { ProductsComponent } from './compants/products/products.component';
 import { DetailsComponent } from './products/details/details.component';
 import { FormValidationComponent } from './compants/form-validation/form-validation.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -27,7 +28,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes), ReactiveFormsModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
