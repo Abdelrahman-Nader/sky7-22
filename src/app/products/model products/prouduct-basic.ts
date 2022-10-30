@@ -1,8 +1,9 @@
 export interface ProuductBasic {
+  item: any;
   id: number;
   name: string;
   price: number;
-  quantity: number;
-  imgurl?: string;
-  categoryID: number;
+  url?: string;
+  description: string;
+  quantity?: string;
 }
