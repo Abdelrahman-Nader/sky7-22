@@ -22,11 +22,10 @@
 
 /* Left Column */
 .left-column img {
-  width: 34%;
+  width: 125%;
   position: absolute;
-  left: 54%;
-  top: 20%;
-  /* opacity: 0; */
+  left: -36%;
+  top: 24%;
   transition: all 0.3s ease;
 }
 
