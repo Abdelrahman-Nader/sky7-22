@@ -1,22 +1,20 @@
-import { FormsModule } from '@angular/forms';
-import { Component, OnInit } from '@angular/core';
+
+import { Component,} from '@angular/core';
 
 @Component({
   selector: 'app-form-validation',
   templateUrl: './form-validation.component.html',
   styleUrls: ['./form-validation.component.css']
 })
-export class FormValidationComponent implements OnInit {
+export class FormValidationComponent  {
 
-  constructor(private form: FormsModule) { }
 
-  ngOnInit(): void {
-  }
-  orderSubmit(){
-    console.log('order is done')
-  }
-  new(){
+  sucsses( ){
+
+    alert('Congratulations, you have successfully completed your purchase')
 
   }
+
 
 }
+

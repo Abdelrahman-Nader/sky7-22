@@ -1,15 +1,15 @@
-<form class="  contaniner d-flex justify-content-center align-items-space-between flex-wrap" novalidate>
+<form class="  contaniner d-flex justify-content-center align-items-space-between flex-wrap" novalidate #f="ngForm">
   <div class="col-md-2">
     <label for="validationCustom01" class="form-label">First name</label>
-    <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
-    <div class="valid-feedback">
+    <input type="text" class="form-control"  required ngModel #fName="ngModel" name="fName" minlength="4" >
+    <div class="valid-feedback" *ngIf="fName.touched && fName.invalid && fName.errors">
       Looks good!
     </div>
   </div>
   <div class="col-md-2">
-    <label for="validationCustom02" class="form-label">Last name</label>
+    <label for="validationCustom02" class="form-label" required ngModel #lName="ngModel" name="lName" minlength="4">Last name</label>
     <input type="text" class="form-control" id="validationCustom02" value="Otto" required>
-    <div class="valid-feedback">
+    <div class="valid-feedback" *ngIf="fName.touched && fName.invalid">
       Looks good!
     </div>
   </div>
@@ -17,36 +17,37 @@
     <label for="validationCustomUsername" class="form-label">Username</label>
     <div class="input-group has-validation">
       <span class="input-group-text" id="inputGroupPrepend">@</span>
-      <input #validationInput type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required pattern="[emaiName@g]">
-      <div class="invalid-feedback" >
-        Please choose a username.
+      <input type="text" class="form-control" id="validationCustomUsername"
+        aria-describedby="inputGroupPrepend" required ngModel #email="ngModel" name="email"
+        >
+      <div class="invalid-feedback" *ngIf="email.touched && email.invalid">
+
+        Please Enter Your email.
       </div>
     </div>
   </div>
-  <div class="col-md-6" (ngSubmit)="new()">
+  <div class="col-md-6">
     <label for="validationCustom03" class="form-label">City</label>
-    <input  #validationInput type="text" class="form-control" id="validationCustom03" name ='' required pattern="[A-za-z]{3,}">
-    <div class="invalid-feedback">
+    <input  type="text" class="form-control" id="validationCustom03" required ngModel #city="ngModel"
+      name="city">
+    <div class="invalid-feedback" *ngIf="city.touched && city.invalid && city.errors">
       Please provide a valid city.
     </div>
   </div>
-<div>
-  {{validationInput.className | json}}
 
-</div>
 
   <div class="col-12">
     <div class="form-check">
-      <input  class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+      <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required ngModel #check="ngModel" name="check">
       <label class="form-check-label" for="invalidCheck">
         Agree to terms and conditions
       </label>
-      <div class="invalid-feedback">
+      <div class="invalid-feedback" *ngIf="check.invalid">
         You must agree before submitting.
       </div>
     </div>
   </div>
   <div class="col-12">
-    <button class="btn btn-primary" type="submit" (submit)="orderSubmit()" >Submit form</button>
+    <button class="btn btn-primary" type="submit" [disabled]="f.invalid" (click)="sucsses()">Submit form</button>
   </div>
 </form>
