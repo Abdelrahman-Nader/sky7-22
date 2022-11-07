@@ -1,10 +1,5 @@
 
-In this project will be able to
-add product
-Delete only one product or delete the entire list
-You can see how many products are in the basket
-You can add an amount directly from the basket
-This is what I have learned so far
+
 # MainSkyPrint
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.2.
