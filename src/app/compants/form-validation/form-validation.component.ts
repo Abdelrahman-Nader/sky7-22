@@ -10,6 +10,12 @@ export class FormValidationComponent {
   text: any;
 
 
+
+  logobj(lName: any){
+    console.log(lName)
+  }
+
+
   sucsses() {
 
     alert('Congratulations, you have successfully completed your purchase')

@@ -1,54 +1,54 @@
 <form class="  contaniner d-flex justify-content-center align-items-space-between flex-wrap" #f="ngForm">
   <div class="col-md-2">
     <label for="validationCustom01" class="form-label">First name</label>
-    <input type="text" class="form-control"  required ngModel #fName="ngModel" name="fName" minlength="4"
-    placeholder="Enter First Name " >
-    <div class="valid-feedback" *ngIf="fName.touched && fName.invalid">
-      Looks good!
-    </div>
+    <input type="text" class="form-control" required ngModel #fName="ngModel" name="fName" minlength="4"
+      placeholder="Enter First Name ">
+    <small class="invalid-feedback" *ngIf="fName.touched && fName.invalid">
+      Please Enter Your Frist Name
+    </small>
   </div>
   <div class="col-md-2">
-    <label for="validationCustom02" class="form-label" >Last name</label>
-    <input type="text" class="form-control" id="validationCustom02" value="Otto" required ngModel #lName="ngModel" name="lName" minlength="4" placeholder="Enter Last Name ">
-    <div class="valid-feedback" *ngIf="fName.touched && fName.invalid">
-      Looks good!
-    </div>
+    <label for="validationCustom02" class="form-label">Last name</label>
+    <input type="text" class="form-control" id="validationCustom02" value="Otto" required ngModel #lName="ngModel"
+      name="lName" minlength="4" placeholder="Enter Last Name ">
+    <small class="invalid-feedback" *ngIf="lName.touched && lName.invalid">
+      Please Enter Your last Name
+    </small>
   </div>
   <div class="col-md-2">
     <label for="validationCustomUsername" class="form-label">Username</label>
     <div class="input-group has-validation">
       <span class="input-group-text" id="inputGroupPrepend">@</span>
-      <input type="text" class="form-control" id="validationCustomUsername"
-        aria-describedby="inputGroupPrepend" required ngModel #email="ngModel" name="email" placeholder="Enter Your Email ">
-      <div class="invalid-feedback" *ngIf="email.touched && email.invalid">
-
+      <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend"
+        required ngModel #email="ngModel" name="email" placeholder="Enter Your Email" minlength="4">
+      <small class="invalid-feedback" *ngIf="email.touched && email.invalid">
         Please Enter Your email.
-      </div>
+      </small>
     </div>
   </div>
   <div class="col-md-6">
     <label for="validationCustom03" class="form-label">City</label>
-    <input  type="text" class="form-control" id="validationCustom03" required ngModel #city="ngModel"
-      name="city">
-    <div class="invalid-feedback" *ngIf="city.touched && city.invalid && city.errors">
+    <input type="text" class="form-control" id="validationCustom03" required ngModel #city="ngModel" name="city"
+      minlength="4">
+    <small class="invalid-feedback" *ngIf="city.touched && city.invalid && city.errors">
       Please provide a valid city.
-    </div>
+    </small>
   </div>
 
 
   <div class="col-12">
     <div class="form-check">
-      <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required ngModel #check="ngModel" name="check">
+      <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required ngModel #check="ngModel"
+        name="check">
       <label class="form-check-label" for="invalidCheck">
         Agree to terms and conditions
       </label>
-      <div class="invalid-feedback" *ngIf="check.invalid">
+      <small class="invalid-feedback" *ngIf="check.invalid">
         You must agree before submitting.
-      </div>
+      </small>
     </div>
   </div>
   <div class="col-12">
-    <button class="btn btn-primary" type="submit" [disabled]="f.invalid" (click)="sucsses()"
-    *ngIf="'sucsses() = true'">Submit form</button>
+    <button class="btn btn-primary" type="submit" [disabled]="f.invalid" (click)="sucsses()">Submit form</button>
   </div>
 </form>
