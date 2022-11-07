@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { observable } from 'rxjs';
+import { Category } from 'src/app/products/model products/category';
+import { ProuductBasic } from 'src/app/products/model products/prouduct-basic';
 import { MainServService } from 'src/app/services/main-serv.service';
 
 @Component({
@@ -9,10 +11,10 @@ import { MainServService } from 'src/app/services/main-serv.service';
 })
 export class ProductsComponent implements OnInit {
 
-  products: any[] = [];
-  categories: any[] = [];
+  products: ProuductBasic[] = [];
+  categories: Category[] = [];
   loading: boolean = false;
-  cartProducts: any[] = [];
+  cartProducts: ProuductBasic[] = [];
   constructor(private service: MainServService){ }
 
 

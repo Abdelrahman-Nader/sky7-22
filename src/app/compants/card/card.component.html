@@ -35,7 +35,7 @@
               <td class="text-right font-weight-semibold align-middle p-4">{{item.item.price}}</td>
               <td class="align-middle p-4">
                 <button class="btn btn-dark" (click)="plusAmount(index)">+</button>
-                <input type="number" class="form-control" (change)="detect()" [(ngModel)]='item.quantity' min="1">
+                <input type="number" class="form-control" (ngModelChange)="detect()" [(ngModel)]='item.quantity' min="1">
                 <button class="btn btn-dark" (click)="minsAmount(index)">-</button>
               </td>
               <td class="text-right font-weight-semibold align-middle p-4">{{item.item.price * item.quantity}}<td>

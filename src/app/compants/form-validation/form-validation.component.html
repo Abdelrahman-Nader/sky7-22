@@ -1,14 +1,15 @@
-<form class="  contaniner d-flex justify-content-center align-items-space-between flex-wrap" novalidate #f="ngForm">
+<form class="  contaniner d-flex justify-content-center align-items-space-between flex-wrap" #f="ngForm">
   <div class="col-md-2">
     <label for="validationCustom01" class="form-label">First name</label>
-    <input type="text" class="form-control"  required ngModel #fName="ngModel" name="fName" minlength="4" >
-    <div class="valid-feedback" *ngIf="fName.touched && fName.invalid && fName.errors">
+    <input type="text" class="form-control"  required ngModel #fName="ngModel" name="fName" minlength="4"
+    placeholder="Enter First Name " >
+    <div class="valid-feedback" *ngIf="fName.touched && fName.invalid">
       Looks good!
     </div>
   </div>
   <div class="col-md-2">
-    <label for="validationCustom02" class="form-label" required ngModel #lName="ngModel" name="lName" minlength="4">Last name</label>
-    <input type="text" class="form-control" id="validationCustom02" value="Otto" required>
+    <label for="validationCustom02" class="form-label" >Last name</label>
+    <input type="text" class="form-control" id="validationCustom02" value="Otto" required ngModel #lName="ngModel" name="lName" minlength="4" placeholder="Enter Last Name ">
     <div class="valid-feedback" *ngIf="fName.touched && fName.invalid">
       Looks good!
     </div>
@@ -18,8 +19,7 @@
     <div class="input-group has-validation">
       <span class="input-group-text" id="inputGroupPrepend">@</span>
       <input type="text" class="form-control" id="validationCustomUsername"
-        aria-describedby="inputGroupPrepend" required ngModel #email="ngModel" name="email"
-        >
+        aria-describedby="inputGroupPrepend" required ngModel #email="ngModel" name="email" placeholder="Enter Your Email ">
       <div class="invalid-feedback" *ngIf="email.touched && email.invalid">
 
         Please Enter Your email.
@@ -48,6 +48,7 @@
     </div>
   </div>
   <div class="col-12">
-    <button class="btn btn-primary" type="submit" [disabled]="f.invalid" (click)="sucsses()">Submit form</button>
+    <button class="btn btn-primary" type="submit" [disabled]="f.invalid" (click)="sucsses()"
+    *ngIf="'sucsses() = true'">Submit form</button>
   </div>
 </form>

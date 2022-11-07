@@ -1,15 +1,16 @@
 
-import { Component,} from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-form-validation',
   templateUrl: './form-validation.component.html',
   styleUrls: ['./form-validation.component.css']
 })
-export class FormValidationComponent  {
+export class FormValidationComponent {
+  text: any;
 
 
-  sucsses( ){
+  sucsses() {
 
     alert('Congratulations, you have successfully completed your purchase')
 
