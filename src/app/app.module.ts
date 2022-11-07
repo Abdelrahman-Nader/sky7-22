@@ -1,3 +1,4 @@
+import { OrderComponent } from './shared/order/order.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
@@ -24,6 +25,10 @@ import { SingleProductComponent } from './products/single-product/single-product
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DetailsComponent } from './products/details/details.component';
 import { FormValidationComponent } from './compants/form-validation/form-validation.component';
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+
 
 @NgModule({
   declarations: [
@@ -41,7 +46,8 @@ import { FormValidationComponent } from './compants/form-validation/form-validat
     SelectComponent,
     SingleProductComponent,
     DetailsComponent,
-    FormValidationComponent
+    FormValidationComponent,
+    OrderComponent
   ],
   imports: [
     BrowserModule,
@@ -49,7 +55,9 @@ import { FormValidationComponent } from './compants/form-validation/form-validat
     NgbModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ToastrModule.forRoot(),
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

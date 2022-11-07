@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 import { observable } from 'rxjs';
 import { Category } from 'src/app/products/model products/category';
 import { ProuductBasic } from 'src/app/products/model products/prouduct-basic';
@@ -15,7 +16,7 @@ export class ProductsComponent implements OnInit {
   categories: Category[] = [];
   loading: boolean = false;
   cartProducts: ProuductBasic[] = [];
-  constructor(private service: MainServService){ }
+  constructor(private service: MainServService, private toaster: ToastrService) { }
 
 
   ngOnInit(): void {
@@ -59,10 +60,11 @@ export class ProductsComponent implements OnInit {
 
       this.cartProducts = JSON.parse(localStorage.getItem("cart")!)
 
-      let exist = this.cartProducts.find(item => item.item.id === event.item.id )
+      let exist = this.cartProducts.find(item => item.item.id === event.item.id)
 
       if (exist) {
-        alert("Products is already in Your Cart")
+        this.toaster.info("Products is already in Your Cart");
+
       } else {
         this.cartProducts.push(event)
         localStorage.setItem("cart", JSON.stringify(this.cartProducts))
@@ -70,12 +72,13 @@ export class ProductsComponent implements OnInit {
     } else {
       this.cartProducts.push(event)
       localStorage.setItem("cart", JSON.stringify(this.cartProducts))
+      this.toaster.success("product add success")
     }
 
 
   }
-  listenerButton(){
+  listenerButton() {
 
-}
+  }
 
 }
