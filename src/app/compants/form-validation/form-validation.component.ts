@@ -18,9 +18,7 @@ constructor( private router:Router) {
 }
 
 
-  logobj(lName: any){
-    console.log(lName)
-  }
+ 
 
 
   sucsses() {
