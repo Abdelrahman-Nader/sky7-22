@@ -1,5 +1,6 @@
 
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-form-validation',
@@ -8,17 +9,21 @@ import { Component } from '@angular/core';
 })
 export class FormValidationComponent {
   text: any;
+/**
+ *
+ */
+constructor( private router:Router) {
 
 
+}
 
-  logobj(lName: any){
-    console.log(lName)
-  }
+
+ 
 
 
   sucsses() {
 
-    alert('Congratulations, you have successfully completed your purchase')
+    this.router.navigate(['/order-sucsess']);
 
   }
 

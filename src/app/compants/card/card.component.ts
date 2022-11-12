@@ -1,5 +1,6 @@
 import { ProuductBasic } from './../../products/model products/prouduct-basic';
 import { Component, OnInit } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-card',
@@ -9,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class CardComponent implements OnInit {
   cartProducts: any[] = [];
   totalPrice: number = 0
-  constructor() { }
+  constructor(private toaster: ToastrService) { }
 
   ngOnInit(): void {
     this.getCartProducts()
@@ -66,6 +67,7 @@ export class CardComponent implements OnInit {
     this.cartProducts.splice(index, 1)
     this.getCartTotalPrice()
     localStorage.setItem("cart", JSON.stringify(this.cartProducts))
+    this.toaster.success('item dellet')
   }
 
 

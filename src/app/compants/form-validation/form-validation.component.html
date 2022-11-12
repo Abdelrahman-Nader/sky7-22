@@ -3,9 +3,14 @@
     <label for="validationCustom01" class="form-label">First name</label>
     <input type="text" class="form-control" required ngModel #fName="ngModel" name="fName" minlength="4"
       placeholder="Enter First Name ">
-    <small class="invalid-feedback" *ngIf="fName.touched && fName.invalid">
+  <div *ngIf="fName.invalid && (fName.dirty || fName.touched)">
+    <small class="invalid-feedback" *ngIf="fName.errors?.['required']">
       Please Enter Your Frist Name
     </small>
+    <small class="invalid-feedback" *ngIf="fName.errors?.['minlength']">
+      Name must be at least 4 characters
+    </small>
+  </div>
   </div>
   <div class="col-md-2">
     <label for="validationCustom02" class="form-label">Last name</label>

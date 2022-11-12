@@ -1,3 +1,4 @@
+import { ToastrService } from 'ngx-toastr';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
@@ -12,17 +13,19 @@ export class SingleProductComponent implements OnInit {
   addButton:boolean = false;
   amount:number = 1;
 
-  constructor() { }
+  constructor(private toastr: ToastrService) { }
 
   ngOnInit(): void {
-    
+
   }
   add(){
     if(this.amount > 0){
 
       this.item.emit({item:this.data, quantity:this.amount})
     } else {
-      alert("Please enter the quantity")
+      this.toastr.error('Please enter quantity')
     }
+
   }
+
 }

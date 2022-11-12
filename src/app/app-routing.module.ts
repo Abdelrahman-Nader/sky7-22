@@ -1,3 +1,4 @@
+import { OrderComponent } from './shared/order/order.component';
 import { SignupComponent } from './compants/log/signup/signup.component';
 import { LoginComponent } from './compants/log/login/login.component';
 import { OurUsComponent } from './compants/our-us/our-us.component';
@@ -24,6 +25,7 @@ const routes: Routes = [
   { path: 'signup', component: SignupComponent },
   { path: 'details/:id', component: DetailsComponent },
   { path: 'form-validation', component: FormValidationComponent },
+  { path: 'order-sucsess', component: OrderComponent },
 
 ];
 
