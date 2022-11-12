@@ -4,7 +4,8 @@
     <div class="card-header">
       <h2>Shopping Cart</h2>
       <div class="mt-4 container">
-        <label class="text-muted font-weight-normal">Item in your Card <span class="text-danger">{{cartProducts.length}}</span></label>
+        <label class="text-muted font-weight-normal">Item in your Card <span
+            class="text-danger">{{cartProducts.length}}</span></label>
 
       </div>
     </div>
@@ -18,12 +19,16 @@
               <th class="text-right py-3 px-4" style="width: 100px;">Price</th>
               <th class="text-center py-3 px-4" style="width: 120px;">Quantity</th>
               <th class="text-right py-3 px-4" style="width: 100px;">Total</th>
-              <th class="text-center align-middle py-3 px-0" style="width: 40px;"> <a  class="btn btn-danger" (click)="clearCard()"> clear card</a></th>
+              <th class="text-center align-middle py-3 px-0" style="width: 40px;"> <a class="btn btn-danger"
+                  (click)="clearCard()"> clear card</a></th>
             </tr>
           </thead>
           <tbody>
 
-            <tr *ngFor="let item of cartProducts; let index = index">
+            <tr *ngFor="let item of cartProducts; let index = index; trackBy: prdTrackByFun"> // and count => the length of iterable تكرار,
+              first => boolean: true when the item is the first item in the iterable , last => true when the item is the
+              last item in the iterable , even => boolean: true when the item has an زوجي even index in the iterable and
+              odd => boolean: true when the item has anفردي odd index in the iterable and we have TrackByFunction
               <td class="p-4">
                 <div class="media align-items-center">
                   <img src="{{item.item.url}}" class="d-unblock ui-w-40 ui-bordered mr-4" alt="">
@@ -35,10 +40,12 @@
               <td class="text-right font-weight-semibold align-middle p-4">{{item.item.price}}</td>
               <td class="align-middle p-4">
                 <button class="btn btn-dark" (click)="plusAmount(index)">+</button>
-                <input type="number" class="form-control" (ngModelChange)="detect()" [(ngModel)]='item.quantity' min="1">
+                <input type="number" class="form-control" (ngModelChange)="detect()" [(ngModel)]='item.quantity'
+                  min="1">
                 <button class="btn btn-dark" (click)="minsAmount(index)">-</button>
               </td>
-              <td class="text-right font-weight-semibold align-middle p-4">{{item.item.price * item.quantity}}<td>
+              <td class="text-right font-weight-semibold align-middle p-4">{{item.item.price * item.quantity}}
+              <td>
               <td class="deleet btn-danger " (click)="deleteProducts(index)">×</td>
             </tr>
 
@@ -62,8 +69,9 @@
       </div>
 
       <div class="float-right">
-        <button type="button" class="btn btn-lg btn-default md-btn-flat mt-2 mr-3" routerLink="/products">Back to shopping</button>
-        <button type="button" class="btn btn-lg btn-primary mt-2" routerLink="/form-validation" >Checkout</button>
+        <button type="button" class="btn btn-lg btn-default md-btn-flat mt-2 mr-3" routerLink="/products">Back to
+          shopping</button>
+        <button type="button" class="btn btn-lg btn-primary mt-2" routerLink="/form-validation">Checkout</button>
       </div>
 
     </div>

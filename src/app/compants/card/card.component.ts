@@ -1,3 +1,4 @@
+import { ProuductBasic } from './../../products/model products/prouduct-basic';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -42,7 +43,7 @@ export class CardComponent implements OnInit {
   }
 
   clearCard() {
-    if(this.cartProducts = []){
+    if (this.cartProducts = []) {
       alert('Are you sure')
       // this.cartProducts = []
       this.getCartTotalPrice()
@@ -65,6 +66,11 @@ export class CardComponent implements OnInit {
     this.cartProducts.splice(index, 1)
     this.getCartTotalPrice()
     localStorage.setItem("cart", JSON.stringify(this.cartProducts))
+  }
+
+
+  prdTrackByFun(index: number, prod: any) {
+    return prod.id
   }
 
 }
