@@ -25,10 +25,11 @@
           </thead>
           <tbody>
 
-            <tr *ngFor="let item of cartProducts; let index = index; trackBy: prdTrackByFun"> // and count => the length of iterable تكرار,
+            <tr *ngFor="let item of cartProducts; let index = index; trackBy: prdTrackByFun"> <!-- and count => the length of iterable تكرار,
               first => boolean: true when the item is the first item in the iterable , last => true when the item is the
               last item in the iterable , even => boolean: true when the item has an زوجي even index in the iterable and
-              odd => boolean: true when the item has anفردي odd index in the iterable and we have TrackByFunction we can't use two dirctive in the same element but we can use ng-container it reblesd the element from in side 
+              odd => boolean: true when the item has anفردي odd index in the iterable and we have TrackByFunction we can't use two dirctive in the same element but we can use ng-container it reblesd the element from in side
+            -->
 
               <td class="p-4">
                 <div class="media align-items-center">
