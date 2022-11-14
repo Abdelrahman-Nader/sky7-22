@@ -13,7 +13,7 @@ export class SingleProductComponent implements OnInit {
   addButton:boolean = false;
   amount:number = 1;
 
-  constructor(private toastr: ToastrService) { }
+  constructor(private toastr: ToastrService) { } // tayle capeling ليه بنستدعي في  constructor عشان اي تغير في البراميتر اللي في فايل السيرفيس يسمع اوتوماتيك
 
   ngOnInit(): void {
 
@@ -27,5 +27,6 @@ export class SingleProductComponent implements OnInit {
     }
 
   }
+
 
 }
