@@ -16,7 +16,7 @@
     <label for="validationCustom02" class="form-label">Last name</label>
     <input type="text" class="form-control" id="validationCustom02" value="Otto" required ngModel #lName="ngModel"
       name="lName" minlength="4" placeholder="Enter Last Name ">
-    <small class="invalid-feedback" *ngIf="lName.touched && lName.invalid">
+    <small class="invalid-feedback" *ngIf="lName.touched && lName.invalid" >
       Please Enter Your last Name
     </small>
   </div>
