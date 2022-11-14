@@ -1,3 +1,4 @@
+import { ProuductBasic } from './../../products/model products/prouduct-basic';
 import { Component, OnInit } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
 
@@ -67,6 +68,11 @@ export class CardComponent implements OnInit {
     this.getCartTotalPrice()
     localStorage.setItem("cart", JSON.stringify(this.cartProducts))
     this.toaster.success('item dellet')
+  }
+
+
+  prdTrackByFun(index: number, prod: any) {
+    return prod.id
   }
 
 }
