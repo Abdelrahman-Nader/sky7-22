@@ -12,13 +12,9 @@ export class FormValidationComponent {
 /**
  *
  */
-constructor( private router:Router) {
-
+constructor( private router:Router ) {
 
 }
-
-
- 
 
 
   sucsses() {
