@@ -11,7 +11,7 @@
       <input type="number"  [(ngModel)]="amount" min="1">
       <button  (click)="add(); addButton= false" class="btn btn-primary" >Add</button>
     </div>
-    <span>{{data.price}}</span>
+    <span>{{data.price | currency}}</span>
   </div>
 </div>
 

@@ -39,14 +39,14 @@
                   </div>
                 </div>
               </td>
-              <td class="text-right font-weight-semibold align-middle p-4">{{item.item.price}}</td>
+              <td class="text-right font-weight-semibold align-middle p-4">{{item.item.price | currency}}</td>
               <td class="align-middle p-4">
                 <button class="btn btn-dark" (click)="plusAmount(index)">+</button>
                 <input type="number" class="form-control" (ngModelChange)="detect()" [(ngModel)]='item.quantity'
                   min="1">
                 <button class="btn btn-dark" (click)="minsAmount(index)">-</button>
               </td>
-              <td class="text-right font-weight-semibold align-middle p-4">{{item.item.price * item.quantity}}
+              <td class="text-right font-weight-semibold align-middle p-4">{{item.item.price * item.quantity | currency}}
               <td>
               <td class="deleet btn-danger " (click)="deleteProducts(index)">×</td>
             </tr>
@@ -65,7 +65,7 @@
           </div>
           <div class="text-right mt-4">
             <label class="text-muted font-weight-normal m-0">Total price</label>
-            <div class="text-large"><strong>{{this.totalPrice}}</strong></div>
+            <div class="text-large"><strong>{{this.totalPrice | currency}}</strong></div>
           </div>
         </div>
       </div>
