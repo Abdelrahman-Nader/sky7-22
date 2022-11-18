@@ -27,6 +27,7 @@ import { DetailsComponent } from './products/details/details.component';
 import { FormValidationComponent } from './compants/form-validation/form-validation.component';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { StyleDirective } from './Dirctive/style.directive';
 
 
 
@@ -47,7 +48,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     SingleProductComponent,
     DetailsComponent,
     FormValidationComponent,
-    OrderComponent
+    OrderComponent,
+    StyleDirective
   ],
   imports: [
     BrowserModule,

@@ -12,18 +12,20 @@
 } */
 .form-check {
   display: flex;
-    justify-content: center;
-    min-height: 1.5rem;
-    padding-left: 1.5em;
-    margin: 1.125rem 1.125rem;
-    align-items: center;
-    align-content: stretch;
-    flex-wrap: wrap;
+  justify-content: center;
+  min-height: 1.5rem;
+  padding-left: 1.5em;
+  margin: 1.125rem 1.125rem;
+  align-items: center;
+  align-content: stretch;
+  flex-wrap: wrap;
 }
+
 .col-md-6 {
   flex: 0 0 auto;
   width: 8%;
 }
+
 .invalid-feedback {
   display: block;
   width: 100%;
@@ -31,3 +33,8 @@
   font-size: .875em;
   color: #dc3545;
 }
+
+/* .ng-invalid {
+  border-color: #dc3545;
+  ;
+} */

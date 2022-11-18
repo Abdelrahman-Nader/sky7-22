@@ -1,23 +1,23 @@
 import { Directive, ElementRef, HostListener } from '@angular/core';
 
 @Directive({
-  selector: '[Style]'
+  selector: '[appHighlight]'
 })
 export class StyleDirective {
 
   constructor(private elementRef: ElementRef) {
-    this.elementRef.nativeElement.stayle.border="3px solid red"
+    // this.elementRef.nativeElement.style.border = "3px solid red"
   }
 
 
-@HostListener('mouseover') onMouseOver(){
+  @HostListener('mouseenter') onMouseEnter() {
 
-  this.elementRef.nativeElement.stayle.border="3px solid red "
-}
-@HostListener('mouseout') onMouseOut(){
+    this.elementRef.nativeElement.style.border = "3px solid red"
+  }
+  @HostListener('mouseleave') onMouseLeave() {
 
-  this.elementRef.nativeElement.stayle.border="2px solid black "
-}
+    this.elementRef.nativeElement.style.border = "2px solid black"
+  }
 
 
 }
