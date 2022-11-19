@@ -27,6 +27,7 @@ import { DetailsComponent } from './products/details/details.component';
 import { FormValidationComponent } from './compants/form-validation/form-validation.component';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { StyleDirective } from './Dirctive/style.directive';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
@@ -48,7 +49,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     SingleProductComponent,
     DetailsComponent,
     FormValidationComponent,
-    OrderComponent
+    OrderComponent,
+    StyleDirective
   ],
   imports: [
     BrowserModule,
