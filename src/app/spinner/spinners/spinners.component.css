@@ -17,6 +17,7 @@
     margin: 0 20px;
     background: #2196f3;
     animation: animate 1.4s linear infinite;
+    
 }
 .loader span:nth-child(1){
     animation-delay: 0s;
